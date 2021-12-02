@@ -16,4 +16,9 @@ public class DemoController {
     public ResponseEntity<?> getStatus(){
         return ResponseEntity.ok("Hello From helloController Listing on Port: "+environment.getProperty("local.server.port"));
     }
+
+    @GetMapping("/hello")
+    public ResponseEntity<?> sayHello(){
+        return ResponseEntity.ok("Hello there");
+    }
 }
